@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="OCTOPOSS — projeto prático de Blue Team para coleta, correlação e investigação de evidências.">
+    <meta name="author" content="Sandro Eugenio Gardinal">
+    <title>OCTOPOSS | Projeto Blue Team</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<header class="header">
+    <nav class="navbar">
+        <a href="../index.html" class="logo">SG<span>.</span></a>
+        <ul class="nav-links">
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="../index.html#projetos">Projetos</a></li>
+            <li><a href="https://github.com/sandro469/OCTOPOSS" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="hero project-hero">
+        <div class="hero-content">
+            <span class="eyebrow">PROJETO PRÁTICO • BLUE TEAM</span>
+            <h1>🐙 OCTOPOSS</h1>
+            <h2>Blue Team Evidence Center</h2>
+            <p>
+                Uma central de evidências desenvolvida em Python para
+                coletar, organizar, correlacionar e investigar informações
+                de um ambiente Linux.
+            </p>
+            <div class="hero-buttons">
+                <a href="https://github.com/sandro469/OCTOPOSS"
+                   class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                    Ver código no GitHub
+                </a>
+                <a href="../index.html#projetos" class="btn btn-secondary">
+                    Voltar ao portfólio
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section-heading">
+            <span class="eyebrow">VISÃO GERAL</span>
+            <h2>Sobre o projeto</h2>
+        </div>
+        <div class="about-content">
+            <p>
+                O OCTOPOSS é um laboratório defensivo criado para transformar
+                informações técnicas do sistema em elementos que apoiem
+                análise e investigação de segurança.
+            </p>
+            <p>
+                Seu princípio é <strong>Evidence First</strong>: uma anomalia
+                não é automaticamente considerada uma ameaça. As evidências
+                disponíveis são analisadas e correlacionadas antes de qualquer
+                conclusão.
+            </p>
+        </div>
+    </section>
+
+    <section class="section section-alt">
+        <div class="section-heading">
+            <span class="eyebrow">FLUXO DE ANÁLISE</span>
+            <h2>Como funciona</h2>
+            <p>O fluxo organiza as etapas de análise defensiva.</p>
+        </div>
+        <div class="projects-grid">
+            <article class="project-card">
+                <h3>01. Coleta</h3>
+                <p>Levantamento de processos, serviços, sockets, logs e informações do sistema.</p>
+            </article>
+            <article class="project-card">
+                <h3>02. Correlação</h3>
+                <p>Busca por relações entre processos, serviços, conexões e eventos registrados.</p>
+            </article>
+            <article class="project-card">
+                <h3>03. Classificação</h3>
+                <p>Organização dos resultados em relações confirmadas, parciais ou insuficientes.</p>
+            </article>
+            <article class="project-card">
+                <h3>04. Investigação</h3>
+                <p>Registro de situações que precisam de análise complementar, sem presumir atividade maliciosa.</p>
+            </article>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section-heading">
+            <span class="eyebrow">ARQUITETURA</span>
+            <h2>Componentes principais</h2>
+        </div>
+        <div class="about-content">
+            <p><strong>Collector:</strong> coleta informações do ambiente Linux, incluindo processos, serviços, sockets e registros do sistema.</p>
+            <p><strong>Correlator V07:</strong> aplica regras para relacionar evidências e classificar os resultados da análise.</p>
+            <p><strong>Central Mind:</strong> núcleo que recebe informações dos componentes e mantém o estado das correlações e investigações.</p>
+            <p><strong>Central Bridge:</strong> integra o correlator ao núcleo central.</p>
+            <p><strong>Evidence Center:</strong> interface web com dashboard e endpoints para consulta de inventário, relatório, evidências e painel.</p>
+        </div>
+    </section>
+
+    <section class="section section-alt">
+        <div class="section-heading">
+            <span class="eyebrow">TECNOLOGIAS</span>
+            <h2>Stack utilizada</h2>
+        </div>
+        <div class="about-content">
+            <p>Python • JavaScript • HTML5 • CSS3 • Linux / WSL • APIs HTTP • Git • GitHub</p>
+            <p>Práticas aplicadas: coleta de dados, análise de logs, correlação de eventos, investigação defensiva e documentação técnica.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section-heading">
+            <span class="eyebrow">TRANSPARÊNCIA TÉCNICA</span>
+            <h2>Escopo e limitações</h2>
+        </div>
+        <div class="about-content">
+            <p>
+                O OCTOPOSS é um projeto de laboratório e demonstração técnica,
+                não uma plataforma SIEM ou solução de monitoramento de produção.
+                Seu mecanismo de correlação é baseado em regras, não em
+                inteligência artificial ou aprendizado de máquina.
+            </p>
+            <p>
+                Algumas relações podem permanecer parciais ou insuficientes
+                quando os dados coletados não permitem atribuir, por exemplo,
+                um socket diretamente a um processo. Nesses casos, o projeto
+                preserva a incerteza e sinaliza a necessidade de investigação.
+            </p>
+            <p>
+                As evidências locais do ambiente de laboratório são mantidas
+                fora do repositório público para evitar a exposição de dados
+                do sistema.
+            </p>
+        </div>
+    </section>
+
+    <section class="section contact-section">
+        <div class="section-heading">
+            <span class="eyebrow">REPOSITÓRIO</span>
+            <h2>Explore o OCTOPOSS</h2>
+            <p>Consulte o código-fonte e a documentação técnica do projeto.</p>
+        </div>
+        <a href="https://github.com/sandro469/OCTOPOSS"
+           class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+            Acessar repositório no GitHub
+        </a>
+    </section>
+</main>
+
+<footer class="footer">
+    <p>© 2026 Sandro Eugenio Gardinal. Portfólio profissional.</p>
+</footer>
+
+</body>
+</html>
