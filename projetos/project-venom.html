@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PROJECT VENOM — laboratório de honeypot para captura e registro de requisições HTTP suspeitas.">
+    <meta name="author" content="Sandro Eugenio Gardinal">
+    <title>PROJECT VENOM | Honeypot</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<header class="header">
+    <nav class="navbar">
+        <a href="../index.html" class="logo">SG<span>.</span></a>
+        <ul class="nav-links">
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="../index.html#projetos">Projetos</a></li>
+            <li><a href="https://github.com/sandro469/PROJECT_VENOM" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="hero project-hero">
+        <div class="hero-content">
+            <span class="eyebrow">PROJETO PRÁTICO • SEGURANÇA DEFENSIVA</span>
+            <h1>🐍 PROJECT VENOM</h1>
+            <h2>Honeypot HTTP para observação de requisições</h2>
+            <p>
+                Um laboratório de segurança desenvolvido em JavaScript com Node.js
+                para receber requisições HTTP, registrar endereços de origem e
+                caminhos acessados e observar tentativas de interação com um serviço simulado.
+            </p>
+            <div class="hero-buttons">
+                <a href="https://github.com/sandro469/PROJECT_VENOM"
+                   class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                    Ver código no GitHub
+                </a>
+                <a href="../index.html#projetos" class="btn btn-secondary">
+                    Voltar ao portfólio
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section-heading">
+            <span class="eyebrow">VISÃO GERAL</span>
+            <h2>Sobre o projeto</h2>
+        </div>
+        <div class="about-content">
+            <p>
+                O PROJECT VENOM é um honeypot experimental que simula um serviço
+                HTTP protegido. A aplicação recebe as requisições direcionadas
+                ao servidor e registra informações úteis para observação e análise.
+            </p>
+            <p>
+                A proposta é praticar conceitos de monitoramento, registro de eventos,
+                análise de requisições e identificação de padrões de acesso em um
+                ambiente controlado.
+            </p>
+        </div>
+    </section>
+
+    <section class="section section-alt">
+        <div class="section-heading">
+            <span class="eyebrow">FLUXO DE FUNCIONAMENTO</span>
+            <h2>Como funciona</h2>
+        </div>
+        <div class="projects-grid">
+            <article class="project-card">
+                <h3>01. Escuta HTTP</h3>
+                <p>O servidor Node.js recebe requisições na porta 3000.</p>
+            </article>
+            <article class="project-card">
+                <h3>02. Registro</h3>
+                <p>Captura o endereço remoto e a rota solicitada, acompanhados de data e hora em UTC.</p>
+            </article>
+            <article class="project-card">
+                <h3>03. Resposta simulada</h3>
+                <p>Retorna o status HTTP 401 Unauthorized para as requisições recebidas.</p>
+            </article>
+            <article class="project-card">
+                <h3>04. Auditoria local</h3>
+                <p>Grava os eventos em logs/venom.log e exibe alertas no terminal.</p>
+            </article>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section-heading">
+            <span class="eyebrow">IMPLEMENTAÇÃO</span>
+            <h2>Componentes e tecnologias</h2>
+        </div>
+        <div class="about-content">
+            <p><strong>Servidor HTTP:</strong> módulo nativo http do Node.js para receber conexões e responder às requisições.</p>
+            <p><strong>Registro de eventos:</strong> módulos fs e path para gravar os dados em arquivo local.</p>
+            <p><strong>JavaScript:</strong> lógica principal de tratamento das requisições e geração dos registros.</p>
+            <p><strong>Python:</strong> script auxiliar experimental para registrar a inicialização do projeto.</p>
+            <p><strong>Ambiente:</strong> Linux / WSL Ubuntu, terminal, Git e GitHub.</p>
+        </div>
+    </section>
+
+    <section class="section section-alt">
+        <div class="section-heading">
+            <span class="eyebrow">APRENDIZADO PRÁTICO</span>
+            <h2>Conceitos aplicados</h2>
+        </div>
+        <div class="about-content">
+            <p>Honeypots • HTTP • Endereços IP • Logs • Monitoramento • Node.js • Linux • Auditoria de requisições</p>
+            <p>
+                O projeto permite observar os dados básicos de cada acesso e
+                utilizar os registros como ponto de partida para exercícios
+                de análise e investigação defensiva.
+            </p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section-heading">
+            <span class="eyebrow">TRANSPARÊNCIA TÉCNICA</span>
+            <h2>Escopo e limitações</h2>
+        </div>
+        <div class="about-content">
+            <p>
+                O PROJECT VENOM é um honeypot simples, desenvolvido para fins
+                educacionais e execução em laboratório. A implementação atual
+                registra o endereço remoto e a rota HTTP, mas não realiza
+                identificação de pessoas, atribuição de autoria ou análise
+                automatizada de ameaças.
+            </p>
+            <p>
+                A resposta HTTP 401 é uma resposta simulada do serviço; ela não
+                representa, por si só, uma detecção ou bloqueio de invasão.
+                Os registros devem ser interpretados considerando o contexto
+                do ambiente e possíveis acessos legítimos.
+            </p>
+            <p>
+                Não é uma solução de produção. Antes de qualquer exposição
+                externa, são necessários controles adicionais de segurança,
+                validação de entradas, proteção dos registros e isolamento
+                adequado do ambiente.
+            </p>
+        </div>
+    </section>
+
+    <section class="section contact-section">
+        <div class="section-heading">
+            <span class="eyebrow">REPOSITÓRIO</span>
+            <h2>Explore o PROJECT VENOM</h2>
+            <p>Consulte o código-fonte e a documentação do laboratório.</p>
+        </div>
+        <a href="https://github.com/sandro469/PROJECT_VENOM"
+           class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+            Acessar repositório no GitHub
+        </a>
+    </section>
+</main>
+
+<footer class="footer">
+    <p>© 2026 Sandro Eugenio Gardinal. Portfólio profissional.</p>
+</footer>
+
+</body>
+</html>
